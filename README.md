@@ -2,7 +2,7 @@
 
 **SSH & 로컬 터미널 클라이언트 for Android**
 
-[![Latest release](https://img.shields.io/github/v/release/nararajun/nararajun?color=2f81f7&label=release)](https://github.com/nararajun/nararajun/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/nararajun/TermiPlus?color=2f81f7&label=release)](https://github.com/nararajun/TermiPlus/releases/latest)
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3ddc84)](#설치-방법--installation)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/nararajun)
 [![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
@@ -20,9 +20,9 @@
 
 | 버전 | 파일 | 비고 |
 | --- | --- | --- |
-| **v1.0.16** (최신) | [TermiPlus_v1.0.16.apk](https://github.com/nararajun/nararajun/releases/latest/download/TermiPlus_v1.0.16.apk) | GitHub Release에서 내려받기 |
+| **v1.0.16** (최신) | [TermiPlus_v1.0.16.apk](https://github.com/nararajun/TermiPlus/releases/latest/download/TermiPlus_v1.0.16.apk) | GitHub Release에서 내려받기 |
 
-- 릴리스 목록: <https://github.com/nararajun/nararajun/releases>
+- 릴리스 목록: <https://github.com/nararajun/TermiPlus/releases>
 - 요구 사항: **Android 7.0 (API 24) 이상**
 - APK 크기: 약 23.5 MB
 
@@ -89,7 +89,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 ## 소스 코드 / Source
 
 - 소스 코드는 **비공개(private) 저장소**에서 관리하며, 배포는 빌드된 APK로만 이루어집니다.
-- 버그 제보·기능 제안은 [Issues](https://github.com/nararajun/nararajun/issues)에 남겨 주세요.
+- 버그 제보·기능 제안은 [Issues](https://github.com/nararajun/TermiPlus/issues)에 남겨 주세요.
 
 ---
 
@@ -100,7 +100,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 > **Physical keyboard + Google keyboard (Gboard), and Korean still types correctly.**
 > On most cloud terminal apps, pairing a physical keyboard with Google's Gboard breaks Korean input — jamo don't compose, characters leak into the shell, or nothing types at all. TermiPlus is built so that **Korean input is fully compatible with a physical keyboard + Gboard setup**.
 
-**Download:** [TermiPlus_v1.0.16.apk](https://github.com/nararajun/nararajun/releases/latest/download/TermiPlus_v1.0.16.apk) (Android 7.0+, ~23.5 MB)
+**Download:** [TermiPlus_v1.0.16.apk](https://github.com/nararajun/TermiPlus/releases/latest/download/TermiPlus_v1.0.16.apk) (Android 7.0+, ~23.5 MB)
 
 **Install:** download the APK on your phone, open it, and allow "install unknown apps" for your browser or file manager when prompted. Installing over an older version keeps your data.
 
@@ -140,6 +140,6 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nararajun)
 [![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
 
-You can buy me a coffee on Ko-fi: <https://ko-fi.com/nararajun> (card or PayPal, any amount). Or send directly through PayPal.Me: <https://paypal.me/nararajun>. Bug reports and feedback are welcome in [Issues](https://github.com/nararajun/nararajun/issues).
+You can buy me a coffee on Ko-fi: <https://ko-fi.com/nararajun> (card or PayPal, any amount). Or send directly through PayPal.Me: <https://paypal.me/nararajun>. Bug reports and feedback are welcome in [Issues](https://github.com/nararajun/TermiPlus/issues).
 
 **Source:** developed in a private repository; only built APKs are distributed.
