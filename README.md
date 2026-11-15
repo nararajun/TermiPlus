@@ -14,6 +14,8 @@
 > **물리 키보드 + 구글 키보드(Gboard)로 한글을 입력해도 깨지지 않습니다.**
 > 다른 클라우드 터미널 앱들은 물리 키보드에 구글 키보드(Gboard)를 붙여 쓰면 한글 조합 입력이 제대로 되지 않았습니다. TermiPlus는 그 문제를 해결해 **물리 키보드 + 구글 키보드(Gboard) 환경에서 한글 입력이 완벽하게 호환**됩니다.
 
+같은 설계 덕분에 한글만이 아니라 **일본어(가나 입력·한자 변환), 중국어(병음·주음), 베트남어(Telex/VNI)** 처럼 조합(Composing)과 변환 후보창이 필요한 입력기도 물리 키보드에서 정상적으로 입력됩니다. 터미널 화면에 텍스트 편집 영역을 붙이지 않고 입력 타입을 `TYPE_NULL`로 두는 앱에서는 IME가 조합을 시작할 곳이 없어 이런 입력이 깨지거나 후보창이 뜨지 않습니다. TermiPlus는 터미널도 하나의 텍스트 편집 영역으로 취급해, 한글과 **완전히 같은 `InputConnection` 조합 경로**로 입력을 받습니다.
+
 블루투스·USB·태블릿 커버 같은 **물리 키보드**를 붙여 쓰는 것을 전제로 만들어졌고, **한국어 IME(조합 입력)** 가 터미널 입력에서 깨지지 않도록 처리했습니다.
 
 ---
@@ -42,6 +44,7 @@
 ### ⌨️ 키보드 · 한글 입력
 
 - **물리 키보드 + 구글 키보드(Gboard) 한글 완벽 호환** — 물리 키보드에 구글 키보드(Gboard)를 함께 써도 한글 조합 입력이 깨지거나 씹히지 않습니다. 대부분의 클라우드 터미널 앱에서 겪던 한글 입력 문제를 해결한 것이 이 앱의 핵심입니다.
+- **CJKV 조합형 IME 호환** — 물리 키보드 + Gboard 환경에서 **일본어(가나 입력·한자 변환), 중국어(병음·주음), 베트남어(Telex/VNI)** 처럼 조합과 변환 후보창이 필요한 입력도 한글과 같은 `InputConnection` 조합 경로로 처리됩니다. 후보를 고르거나 다시 변환할 때 IME가 보내는 `deleteSurroundingText` 요청까지 조합 버퍼와 맞춰 주므로, 변환·재입력 과정에서 글자가 사라지거나 두 번 들어가지 않습니다. (한국어는 Gboard·삼성 키보드 실기기에서 확인했고, 다른 언어 입력도 같은 경로를 씁니다.)
 - **실제 조합 버퍼를 IME와 동기화** — 조합 중인 글자를 앱이 직접 들고 IME와 주고받기 때문에, 조합 문자가 터미널로 새어 나가거나 같은 글자가 두 번 들어가는 일이 없습니다. 조합 중에 IME가 알려주는 지우기 요청까지 정확히 반영해 **한 글자씩 지울 때 밀리는 현상**도 없습니다.
 - **한/영 전환이 그대로 동작** — 한글 IME·오른쪽 Alt 한영 전환을 막는 입력 타입을 쓰지 않아, **Gboard·삼성 키보드에서 한영 전환키가 정상 동작**합니다.
 - **다른 앱에 다녀와도 입력이 살아 있음** — 크롬·유튜브 등에 갔다 돌아오면 끊기던 키보드 연결을 되찾아 터미널 입력을 이어 줍니다.
@@ -97,10 +100,12 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 
 ## English
 
-**TermiPlus** is an SSH and local terminal client for Android, built for people who type on a **physical keyboard** (Bluetooth, USB, or a tablet cover keyboard) and who need **Korean IME composition** to work properly inside a terminal.
+**TermiPlus** is an SSH and local terminal client for Android, built for people who type on a **physical keyboard** (Bluetooth, USB, or a tablet cover keyboard) and who need **composing IMEs** to work properly inside a terminal — Korean first, and the same path carries Japanese, Chinese and Vietnamese input.
 
 > **Physical keyboard + Google keyboard (Gboard), and Korean still types correctly.**
 > On most cloud terminal apps, pairing a physical keyboard with Google's Gboard breaks Korean input — jamo don't compose, characters leak into the shell, or nothing types at all. TermiPlus is built so that **Korean input is fully compatible with a physical keyboard + Gboard setup**.
+
+The same design extends past Korean. **Japanese (kana input with kanji conversion), Chinese (Pinyin/Zhuyin) and Vietnamese (Telex/VNI)** all need a composing region and a conversion candidate window, and on a physical keyboard they run over the very same `InputConnection` path. Apps that leave the terminal at `TYPE_NULL` give the IME nowhere to compose, so candidates never appear and keystrokes break; TermiPlus treats the terminal as a real text editing surface instead.
 
 **Download:** [TermiPlus_v1.0.16.apk](https://github.com/nararajun/TermiPlus/releases/latest/download/TermiPlus_v1.0.16.apk) (Android 7.0+, ~23.5 MB)
 
@@ -108,6 +113,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 
 **Keyboard & input**
 - **Full Korean IME (Gboard) compatibility with a physical keyboard** — Korean composition works instead of breaking, fixing the problem common to most cloud terminal apps
+- **CJKV composing IMEs** — with a physical keyboard and Gboard, Japanese (kana + kanji conversion), Chinese (Pinyin/Zhuyin) and Vietnamese (Telex/VNI) input uses the same `InputConnection` composing path as Korean. IME `deleteSurroundingText` requests are reconciled with the composing buffer, so re-converting or erasing candidates neither drops nor duplicates characters. (Korean is verified on device with Gboard and Samsung Keyboard; the other languages share the same input path.)
 - A real composing buffer is kept in sync with the IME, so composing text never leaks into the shell, characters aren't entered twice, and backspacing through a syllable doesn't shift it
 - **Hangul/English (Han/Young) switching works** — the input type avoids the flags that disable Korean IMEs and the Right-Alt language key on Gboard and Samsung Keyboard
 - Input is re-bound after you come back from Chrome, YouTube or other apps, so typing keeps working
