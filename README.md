@@ -6,7 +6,7 @@
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3ddc84)](#설치-방법--installation)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/nararajun)
 
-안드로이드에서 SSH 서버에 접속해 터미널을 쓰고, 파일을 옮기고, 자주 쓰는 명령을 골라 쓰기 위한 앱입니다.
+안드로이드에서 SSH 서버에 접속해 터미널을 쓰고, 원격 파일을 살펴보고, 자주 쓰는 명령을 골라 쓰기 위한 앱입니다.
 
 > **물리 키보드 + 구글 키보드(Gboard)로 한글을 입력해도 깨지지 않습니다.**
 > 다른 클라우드 터미널 앱들은 물리 키보드에 구글 키보드(Gboard)를 붙여 쓰면 한글 조합 입력이 제대로 되지 않았습니다. TermiPlus는 그 문제를 해결해 **물리 키보드 + 구글 키보드(Gboard) 환경에서 한글 입력이 완벽하게 호환**됩니다.
@@ -36,19 +36,41 @@
 
 ## 주요 기능
 
-- **SSH 접속과 다중 세션** — 탭으로 여러 세션을 오가며 사용, 탭 닫기·재접속 지원
-- **호스트 관리** — 라벨·호스트명/IP·포트·계정·태그 저장, 검색, 즐겨찾기, 원탭 접속
-- **인증** — 비밀번호와 SSH 키 인증, 앱에서 RSA/Ed25519 키 생성 및 공개키 복사
-- **SFTP 파일 탐색기** — 원격 서버의 파일 목록 조회·탐색
-- **스니펫(Quick Phrases)** — 자주 쓰는 명령을 저장하고 터미널에서 바로 실행
-- **명령 히스토리** — 최근 실행 명령 다시 쓰기, 전체 복사
-- **터미널 빠른 접근 바** — 방향키·Esc·Ctrl 등 자주 쓰는 키를 화면에서 바로
+### ⌨️ 키보드 · 한글 입력
+
 - **물리 키보드 + 구글 키보드(Gboard) 한글 완벽 호환** — 물리 키보드에 구글 키보드(Gboard)를 함께 써도 한글 조합 입력이 깨지거나 씹히지 않습니다. 대부분의 클라우드 터미널 앱에서 겪던 한글 입력 문제를 해결한 것이 이 앱의 핵심입니다.
-- **물리 키보드 지원** — 블루투스·USB·태블릿 커버 키보드, Ctrl+C/Ctrl+V 등 단축키
-- **한국어 IME 조합 입력 보호** — Gboard 등에서 한글 조합 중인 글자가 터미널로 새어 나가지 않도록 처리
-- **백그라운드 세션 유지** — 다른 앱을 쓰는 동안에도 SSH 연결 유지(포그라운드 서비스), 연결 끊김 감지 시 재접속
-- **로컬 안드로이드 셸** — 서버 없이 기기 안의 CLI를 바로 열어 사용
-- **화면 설정** — 터미널 테마·글꼴 크기, 인터페이스 언어(한국어·영어·일본어·중국어·스페인어·프랑스어·베트남어)
+- **실제 조합 버퍼를 IME와 동기화** — 조합 중인 글자를 앱이 직접 들고 IME와 주고받기 때문에, 조합 문자가 터미널로 새어 나가거나 같은 글자가 두 번 들어가는 일이 없습니다. 조합 중에 IME가 알려주는 지우기 요청까지 정확히 반영해 **한 글자씩 지울 때 밀리는 현상**도 없습니다.
+- **한/영 전환이 그대로 동작** — 한글 IME·오른쪽 Alt 한영 전환을 막는 입력 타입을 쓰지 않아, **Gboard·삼성 키보드에서 한영 전환키가 정상 동작**합니다.
+- **다른 앱에 다녀와도 입력이 살아 있음** — 크롬·유튜브 등에 갔다 돌아오면 끊기던 키보드 연결을 되찾아 터미널 입력을 이어 줍니다.
+- **물리 키보드 단축키** — 블루투스·USB·태블릿 커버 키보드 지원. Ctrl+A~Z, Ctrl+[ · Ctrl+\ · Ctrl+], Ctrl+Space, **Ctrl+V / Cmd+V 붙여넣기**, Cmd+C=Ctrl+C, Tab/Shift+Tab, Esc, 방향키, **PageUp/PageDown, Home/End**, Delete, Alt+Enter, 왼쪽 Alt+문자(터미널 Meta 키)
+- **마우스·트랙패드** — 클릭 후 드래그 선택, Shift+클릭으로 선택 확장, 더블클릭 단어 선택, **우클릭 메뉴**(붙여넣기·선택 복사·전체 복사), 마우스 휠 스크롤
+
+### 🖥️ 터미널
+
+- **SSH 접속과 다중 세션** — 탭으로 여러 세션을 오가며 사용, 탭 닫기·재접속 지원
+- **xterm-256color · 트루컬러** — 256색과 24비트 트루컬러, **4,000줄 스크롤백**
+- **전체 화면 프로그램 지원** — 대체 화면 버퍼(vim·tmux·htop 등), 브래킷 붙여넣기, 마우스 트래킹(SGR)
+- **텍스트 선택·복사** — 드래그로 선택, 선택 영역 가장자리 자동 스크롤, 전체 복사(클립보드 용량 초과 시 최근 내용 위주로 안내)
+- **백그라운드 세션 유지** — 포그라운드 서비스와 Wi-Fi 락으로 다른 앱을 쓰는 동안에도 SSH 연결 유지, 주기적 킵얼라이브 핑으로 끊김을 감지해 **자동 재연결**
+- **로컬 안드로이드 셸** — 서버 없이 기기 안의 CLI를 바로 열어 사용 (`TERM=xterm-256color`, 트루컬러)
+
+### 🗂️ 서버 관리 · 파일
+
+- **호스트 관리** — 라벨·호스트명/IP·포트·계정 저장, 그룹·태그·색상·메모, 검색, 원탭 접속
+- **인증** — 비밀번호·SSH 키 인증(키보드 인터랙티브 인증 포함), 앱에서 **RSA 2048 / Ed25519 키 생성**(패스프레이즈 선택) 및 공개키 복사
+- **SFTP 파일 브라우저** — 원격 서버의 폴더 탐색, 파일 권한·용량 표시 (파일 조회·탐색용이며 업로드/다운로드는 지원하지 않습니다)
+
+### ⚡ 빠른 작업
+
+- **터미널 빠른 접근 바** — Esc·Enter·Tab·Shift+Tab·^C·^D·^Z·^L·방향키·Home·End·PgUp/PgDn·기호(`| ~ / - _ $ & : @ ; \`)를 화면에서 원터치, 문구·즐겨찾기·히스토리·선택 복사·붙여넣기 칩
+- **스니펫(Quick Phrases)** — 자주 쓰는 명령을 이름·카테고리·즐겨찾기로 저장하고 터미널에서 바로 실행
+- **명령 히스토리** — 호스트별로 실행한 명령 기록, 탭해서 바로 다시 실행, 즐겨찾기 문구로 저장
+
+### 🎨 화면 · 언어
+
+- **태블릿·가로 화면** — 넓은 화면에서는 왼쪽 레일 내비게이션, 터미널 전체 화면 모드
+- **테마 5종** — Termius Dark · Dracula · Monokai · Nord · Cyberpunk, 글꼴 크기 11~24sp
+- **지원 언어 8개** — **한국어, English, 日本語, 简体中文, Español, Français, ภาษาไทย(태국어), Tiếng Việt(베트남어)**. 기기 언어를 자동으로 따라가며, 설정에서 직접 바꿀 수 있습니다.
 
 ## 후원 / Support the development
 
@@ -79,18 +101,36 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 
 **Install:** download the APK on your phone, open it, and allow "install unknown apps" for your browser or file manager when prompted. Installing over an older version keeps your data.
 
-**Features**
-- SSH sessions in tabs, host management with tags, search and favorites
-- Password and SSH key auth; generate RSA/Ed25519 keys in the app
-- SFTP file browser
-- Snippets (quick command library) and command history
-- Quick access bar for arrows, Esc, Ctrl and other keys
+**Keyboard & input**
 - **Full Korean IME (Gboard) compatibility with a physical keyboard** — Korean composition works instead of breaking, fixing the problem common to most cloud terminal apps
-- Physical keyboard shortcuts (Ctrl+C / Ctrl+V and more)
-- Korean IME composition protection, so composing text does not leak into the shell
-- Background keep-alive for SSH sessions, with reconnect on drop
-- On-device Android shell (local CLI)
-- Terminal themes, font size, and UI language (English, Korean, Japanese, Chinese, Spanish, French, Vietnamese)
+- A real composing buffer is kept in sync with the IME, so composing text never leaks into the shell, characters aren't entered twice, and backspacing through a syllable doesn't shift it
+- **Hangul/English (Han/Young) switching works** — the input type avoids the flags that disable Korean IMEs and the Right-Alt language key on Gboard and Samsung Keyboard
+- Input is re-bound after you come back from Chrome, YouTube or other apps, so typing keeps working
+- Physical keyboard shortcuts: Ctrl+A–Z, Ctrl+[ / Ctrl+\ / Ctrl+], Ctrl+Space, **Ctrl+V / Cmd+V paste**, Cmd+C as Ctrl+C, Tab/Shift+Tab, Esc, arrows, **PageUp/PageDown and Home/End**, Delete, Alt+Enter, Left-Alt+key as terminal Meta
+- Mouse / trackpad: click-and-drag selection, Shift+click to extend, double-click word select, **right-click menu** (paste, copy selection, copy all), wheel scrolling
+
+**Terminal**
+- SSH sessions in tabs, close and reconnect
+- xterm-256color with 24-bit truecolor and a **4,000-line scrollback**
+- Alternate screen buffer (vim, tmux, htop), bracketed paste, mouse tracking (SGR)
+- Drag to select, auto-scroll at the edges, copy all (with a notice when the clipboard limit is hit)
+- **Background keep-alive** — foreground service plus a Wi-Fi lock keeps SSH alive while you use other apps, with periodic keepalive pings and automatic reconnect on drop
+- On-device Android shell (local CLI) with `TERM=xterm-256color` and truecolor
+
+**Servers & files**
+- Host management: label, hostname/IP, port, username, group, tag, color, notes, search, one-tap connect
+- Password and SSH key auth (including keyboard-interactive); generate **RSA 2048 / Ed25519** keys in the app (optional passphrase) and copy the public key
+- SFTP file browser: browse remote folders, see permissions and file sizes (browsing only — no upload or download yet)
+
+**Quick actions**
+- On-screen quick access bar: Esc, Enter, Tab/Shift+Tab, ^C ^D ^Z ^L, arrows, Home, End, PgUp/PgDn and shell symbols (`| ~ / - _ $ & : @ ; \`), plus chips for phrases, favorites, history, select-copy and paste
+- Snippets (quick phrases) with name, category and favorites, runnable straight from the terminal
+- Command history recorded per host: tap to re-run, star to save as a favorite phrase
+
+**Display & languages**
+- Tablet and landscape layouts with a left navigation rail, plus a full-screen terminal mode
+- Five themes — Termius Dark, Dracula, Monokai, Nord, Cyberpunk — and font size from 11 to 24 sp
+- **8 interface languages: English, 한국어 (Korean), 日本語 (Japanese), 简体中文 (Chinese), Español (Spanish), Français (French), ภาษาไทย (Thai), Tiếng Việt (Vietnamese)** — follows the device language automatically and can be changed in Settings
 
 **Support:** TermiPlus is free, and donations are purely voluntary — nothing is locked behind them.
 
