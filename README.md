@@ -1,5 +1,7 @@
 # TermiPlus
 
+![TermiPlus demo](demo.gif)
+
 **SSH & 로컬 터미널 클라이언트 for Android**
 
 [![Latest release](https://img.shields.io/github/v/release/nararajun/TermiPlus?color=2f81f7&label=release)](https://github.com/nararajun/TermiPlus/releases/latest)
