@@ -42,7 +42,7 @@
 - **실제 조합 버퍼를 IME와 동기화** — 조합 중인 글자를 앱이 직접 들고 IME와 주고받기 때문에, 조합 문자가 터미널로 새어 나가거나 같은 글자가 두 번 들어가는 일이 없습니다. 조합 중에 IME가 알려주는 지우기 요청까지 정확히 반영해 **한 글자씩 지울 때 밀리는 현상**도 없습니다.
 - **한/영 전환이 그대로 동작** — 한글 IME·오른쪽 Alt 한영 전환을 막는 입력 타입을 쓰지 않아, **Gboard·삼성 키보드에서 한영 전환키가 정상 동작**합니다.
 - **다른 앱에 다녀와도 입력이 살아 있음** — 크롬·유튜브 등에 갔다 돌아오면 끊기던 키보드 연결을 되찾아 터미널 입력을 이어 줍니다.
-- **물리 키보드 단축키** — 블루투스·USB·태블릿 커버 키보드 지원. Ctrl+A~Z, Ctrl+[ · Ctrl+\ · Ctrl+], Ctrl+Space, **Ctrl+V / Cmd+V 붙여넣기**, Cmd+C=Ctrl+C, Tab/Shift+Tab, Esc, 방향키, **PageUp/PageDown, Home/End**, Delete, Alt+Enter, 왼쪽 Alt+문자(터미널 Meta 키)
+- **물리 키보드 단축키** — 블루투스·USB·태블릿 커버 키보드 지원. Ctrl+A~Z(제어 문자), Ctrl+[ · Ctrl+백슬래시 · Ctrl+](특수 제어 문자), Ctrl+Space, **Ctrl+V / Cmd+V 붙여넣기**, Cmd+C=Ctrl+C, Tab/Shift+Tab, Esc, 방향키, **PageUp/PageDown, Home/End**, Delete, Alt+Enter, 왼쪽 Alt+문자(터미널 Meta 키)
 - **마우스·트랙패드** — 클릭 후 드래그 선택, Shift+클릭으로 선택 확장, 더블클릭 단어 선택, **우클릭 메뉴**(붙여넣기·선택 복사·전체 복사), 마우스 휠 스크롤
 
 ### 🖥️ 터미널
@@ -106,7 +106,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 - A real composing buffer is kept in sync with the IME, so composing text never leaks into the shell, characters aren't entered twice, and backspacing through a syllable doesn't shift it
 - **Hangul/English (Han/Young) switching works** — the input type avoids the flags that disable Korean IMEs and the Right-Alt language key on Gboard and Samsung Keyboard
 - Input is re-bound after you come back from Chrome, YouTube or other apps, so typing keeps working
-- Physical keyboard shortcuts: Ctrl+A–Z, Ctrl+[ / Ctrl+\ / Ctrl+], Ctrl+Space, **Ctrl+V / Cmd+V paste**, Cmd+C as Ctrl+C, Tab/Shift+Tab, Esc, arrows, **PageUp/PageDown and Home/End**, Delete, Alt+Enter, Left-Alt+key as terminal Meta
+- Physical keyboard shortcuts: Ctrl+A–Z (control characters), Ctrl+[ / Ctrl+backslash / Ctrl+] (special control characters), Ctrl+Space, **Ctrl+V / Cmd+V paste**, Cmd+C as Ctrl+C, Tab/Shift+Tab, Esc, arrows, **PageUp/PageDown and Home/End**, Delete, Alt+Enter, Left-Alt+key as terminal Meta
 - Mouse / trackpad: click-and-drag selection, Shift+click to extend, double-click word select, **right-click menu** (paste, copy selection, copy all), wheel scrolling
 
 **Terminal**
