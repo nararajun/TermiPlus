@@ -7,6 +7,10 @@
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/nararajun)
 
 안드로이드에서 SSH 서버에 접속해 터미널을 쓰고, 파일을 옮기고, 자주 쓰는 명령을 골라 쓰기 위한 앱입니다.
+
+> **물리 키보드 + 구글 키보드(Gboard)로 한글을 입력해도 깨지지 않습니다.**
+> 다른 클라우드 터미널 앱들은 물리 키보드에 구글 키보드(Gboard)를 붙여 쓰면 한글 조합 입력이 제대로 되지 않았습니다. TermiPlus는 그 문제를 해결해 **물리 키보드 + 구글 키보드(Gboard) 환경에서 한글 입력이 완벽하게 호환**됩니다.
+
 블루투스·USB·태블릿 커버 같은 **물리 키보드**를 붙여 쓰는 것을 전제로 만들어졌고, **한국어 IME(조합 입력)** 가 터미널 입력에서 깨지지 않도록 처리했습니다.
 
 ---
@@ -39,6 +43,7 @@
 - **스니펫(Quick Phrases)** — 자주 쓰는 명령을 저장하고 터미널에서 바로 실행
 - **명령 히스토리** — 최근 실행 명령 다시 쓰기, 전체 복사
 - **터미널 빠른 접근 바** — 방향키·Esc·Ctrl 등 자주 쓰는 키를 화면에서 바로
+- **물리 키보드 + 구글 키보드(Gboard) 한글 완벽 호환** — 물리 키보드에 구글 키보드(Gboard)를 함께 써도 한글 조합 입력이 깨지거나 씹히지 않습니다. 대부분의 클라우드 터미널 앱에서 겪던 한글 입력 문제를 해결한 것이 이 앱의 핵심입니다.
 - **물리 키보드 지원** — 블루투스·USB·태블릿 커버 키보드, Ctrl+C/Ctrl+V 등 단축키
 - **한국어 IME 조합 입력 보호** — Gboard 등에서 한글 조합 중인 글자가 터미널로 새어 나가지 않도록 처리
 - **백그라운드 세션 유지** — 다른 앱을 쓰는 동안에도 SSH 연결 유지(포그라운드 서비스), 연결 끊김 감지 시 재접속
@@ -67,6 +72,9 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 
 **TermiPlus** is an SSH and local terminal client for Android, built for people who type on a **physical keyboard** (Bluetooth, USB, or a tablet cover keyboard) and who need **Korean IME composition** to work properly inside a terminal.
 
+> **Physical keyboard + Google keyboard (Gboard), and Korean still types correctly.**
+> On most cloud terminal apps, pairing a physical keyboard with Google's Gboard breaks Korean input — jamo don't compose, characters leak into the shell, or nothing types at all. TermiPlus is built so that **Korean input is fully compatible with a physical keyboard + Gboard setup**.
+
 **Download:** [TermiPlus_v1.0.16.apk](https://github.com/nararajun/nararajun/releases/latest/download/TermiPlus_v1.0.16.apk) (Android 7.0+, ~23.5 MB)
 
 **Install:** download the APK on your phone, open it, and allow "install unknown apps" for your browser or file manager when prompted. Installing over an older version keeps your data.
@@ -77,6 +85,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 - SFTP file browser
 - Snippets (quick command library) and command history
 - Quick access bar for arrows, Esc, Ctrl and other keys
+- **Full Korean IME (Gboard) compatibility with a physical keyboard** — Korean composition works instead of breaking, fixing the problem common to most cloud terminal apps
 - Physical keyboard shortcuts (Ctrl+C / Ctrl+V and more)
 - Korean IME composition protection, so composing text does not leak into the shell
 - Background keep-alive for SSH sessions, with reconnect on drop
