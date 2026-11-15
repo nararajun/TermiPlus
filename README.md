@@ -5,6 +5,7 @@
 [![Latest release](https://img.shields.io/github/v/release/nararajun/nararajun?color=2f81f7&label=release)](https://github.com/nararajun/nararajun/releases/latest)
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3ddc84)](#설치-방법--installation)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/nararajun)
+[![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
 
 안드로이드에서 SSH 서버에 접속해 터미널을 쓰고, 원격 파일을 살펴보고, 자주 쓰는 명령을 골라 쓰기 위한 앱입니다.
 
@@ -78,8 +79,10 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 후원은 **강제가 아니라 순수한 응원**이고, 후원 여부와 관계없이 모든 기능을 그대로 쓰실 수 있습니다.
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nararajun)
+[![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
 
 - 후원 페이지: <https://ko-fi.com/nararajun> — Ko-fi에서 카드 또는 PayPal로 커피 한 잔 값만큼 보내실 수 있습니다.
+- PayPal로 바로 보내기: <https://paypal.me/nararajun> — PayPal 계정으로 금액을 입력해 보내실 수 있습니다.
 - 금액은 정해져 있지 않습니다. 크게 한 번보다 가볍게 자주 응원해 주시는 편이 개발에 훨씬 도움이 됩니다.
 - 후원하지 않으셔도 됩니다. 버그 제보나 사용 후기만으로도 큰 도움이 됩니다.
 
@@ -135,7 +138,8 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 **Support:** TermiPlus is free, and donations are purely voluntary — nothing is locked behind them.
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nararajun)
+[![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
 
-You can buy me a coffee on Ko-fi: <https://ko-fi.com/nararajun> (card or PayPal, any amount). Bug reports and feedback are welcome in [Issues](https://github.com/nararajun/nararajun/issues).
+You can buy me a coffee on Ko-fi: <https://ko-fi.com/nararajun> (card or PayPal, any amount). Or send directly through PayPal.Me: <https://paypal.me/nararajun>. Bug reports and feedback are welcome in [Issues](https://github.com/nararajun/nararajun/issues).
 
 **Source:** developed in a private repository; only built APKs are distributed.
