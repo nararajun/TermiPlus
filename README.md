@@ -50,7 +50,7 @@
 TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어집니다.
 후원은 **강제가 아니라 순수한 응원**이고, 후원 여부와 관계없이 모든 기능을 그대로 쓰실 수 있습니다.
 
-<a href="https://ko-fi.com/nararajun"><img src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" alt="Buy Me a Coffee at ko-fi.com" height="36"></a>
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nararajun)
 
 - 후원 페이지: <https://ko-fi.com/nararajun> — Ko-fi에서 카드 또는 PayPal로 커피 한 잔 값만큼 보내실 수 있습니다.
 - 금액은 정해져 있지 않습니다. 크게 한 번보다 가볍게 자주 응원해 주시는 편이 개발에 훨씬 도움이 됩니다.
@@ -85,7 +85,7 @@ TermiPlus는 무료로 배포되며, 개발은 자발적인 후원으로 이어�
 
 **Support:** TermiPlus is free, and donations are purely voluntary — nothing is locked behind them.
 
-<a href="https://ko-fi.com/nararajun"><img src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" alt="Buy Me a Coffee at ko-fi.com" height="36"></a>
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nararajun)
 
 You can buy me a coffee on Ko-fi: <https://ko-fi.com/nararajun> (card or PayPal, any amount). Bug reports and feedback are welcome in [Issues](https://github.com/nararajun/nararajun/issues).
 
