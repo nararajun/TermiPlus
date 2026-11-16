@@ -5,6 +5,7 @@
 **SSH & 로컬 터미널 클라이언트 for Android**
 
 [![Latest release](https://img.shields.io/github/v/release/nararajun/TermiPlus?color=2f81f7&label=release)](https://github.com/nararajun/TermiPlus/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/nararajun/TermiPlus/total?color=2f81f7&label=downloads)](https://github.com/nararajun/TermiPlus/releases)
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3ddc84)](#설치-방법--installation)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/nararajun)
 [![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/nararajun)
